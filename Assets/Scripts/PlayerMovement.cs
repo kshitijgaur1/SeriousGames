@@ -24,25 +24,25 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsMoving",true);
             animator.SetFloat("MoveX", 1f);
             animator.SetFloat("MoveY", 0f);
-            transform.position +=  transform.right * (Time.deltaTime * 5);
+            transform.position +=  transform.right * (Time.deltaTime * 7);
         }
         else if(Input.GetKey(KeyCode.LeftArrow)) {
             animator.SetBool("IsMoving",true);
             animator.SetFloat("MoveX", -1f);
             animator.SetFloat("MoveY", 0f);
-            transform.position +=  transform.right * (Time.deltaTime * -5);
+            transform.position +=  transform.right * (Time.deltaTime * -7);
         }
         else if(Input.GetKey(KeyCode.UpArrow)) {
             animator.SetBool("IsMoving",true);
             animator.SetFloat("MoveX", 0f);
             animator.SetFloat("MoveY", 1f);
-            transform.position +=  transform.up * (Time.deltaTime * 5);
+            transform.position +=  transform.up * (Time.deltaTime * 7);
         }
         else if(Input.GetKey(KeyCode.DownArrow)) {
             animator.SetBool("IsMoving",true);
             animator.SetFloat("MoveX", 0f);
             animator.SetFloat("MoveY", -1f);
-            transform.position +=  transform.up * (Time.deltaTime * -5);
+            transform.position +=  transform.up * (Time.deltaTime * -7);
         }
         else
         {

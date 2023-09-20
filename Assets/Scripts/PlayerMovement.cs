@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Animator animator;
+    [SerializeField] public LayerMask solidObjectsLayer;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,25 +26,34 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsMoving",true);
             animator.SetFloat("MoveX", 1f);
             animator.SetFloat("MoveY", 0f);
-            transform.position +=  transform.right * (Time.deltaTime * 7);
+            
+            Vector2 targetPos =  transform.position+ transform.right * (Time.deltaTime * 7);
+            if (Physics2D.OverlapCircle(targetPos, 0.1f, solidObjectsLayer) == null)
+                transform.position = targetPos;
         }
         else if(Input.GetAxisRaw("Horizontal")<-0.1f) {
             animator.SetBool("IsMoving",true);
             animator.SetFloat("MoveX", -1f);
             animator.SetFloat("MoveY", 0f);
-            transform.position +=  transform.right * (Time.deltaTime * -7);
+            Vector2 targetPos =  transform.position+ transform.right * (Time.deltaTime * -7);
+            if (Physics2D.OverlapCircle(targetPos, 0.1f, solidObjectsLayer) == null)
+                transform.position = targetPos;
         }
         else if(Input.GetAxisRaw("Vertical")>0.1f) {
             animator.SetBool("IsMoving",true);
             animator.SetFloat("MoveX", 0f);
             animator.SetFloat("MoveY", 1f);
-            transform.position +=  transform.up * (Time.deltaTime * 7);
+            Vector2 targetPos =  transform.position+ transform.up * (Time.deltaTime * 7);
+            if (Physics2D.OverlapCircle(targetPos, 0.1f, solidObjectsLayer) == null)
+                transform.position = targetPos;
         }
         else if(Input.GetAxisRaw("Vertical")<-0.1f) {
             animator.SetBool("IsMoving",true);
             animator.SetFloat("MoveX", 0f);
             animator.SetFloat("MoveY", -1f);
-            transform.position +=  transform.up * (Time.deltaTime * -7);
+            Vector2 targetPos =  transform.position + transform.up * (Time.deltaTime * -7);
+            if (Physics2D.OverlapCircle(targetPos, 0.1f, solidObjectsLayer) == null)
+                transform.position = targetPos;
         }
         else
         {

@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class DialogueManager : MonoBehaviour {
+public class DialogueManager : MonoBehaviour
+{
 
 	public Image actorImage;
 	public TextMeshProUGUI actorName;
@@ -15,10 +16,15 @@ public class DialogueManager : MonoBehaviour {
 	Actor[] currentActors;
 	int activeMessage = 0;
 
-	public void OpenDialogue(Message[] messages, Actor[] actors) {
+	public static bool isActive = false;
+
+
+	public void OpenDialogue(Message[] messages, Actor[] actors)
+	{
 		currentMessages = messages;
 		currentActors = actors;
 		activeMessage = 0;
+		isActive = true;
 
 		Debug.Log("Started conversation! Loaded messages: " + messages.Length);
 		DisplayMessage();
@@ -30,16 +36,34 @@ public class DialogueManager : MonoBehaviour {
 		messageText.text = messageToDisplay.message;
 
 		Actor actorToDisplay = currentActors[messageToDisplay.actorId];
-        actorImage.sprite = actorToDisplay.sprite;
-    }
-	
-	void Start () {
-		
+		actorName.text = actorToDisplay.name;
+		actorImage.sprite = actorToDisplay.sprite;
 	}
 
-	
-	void Update ()
+	public void NextMessage()
+	{
+		activeMessage++;
+		if (activeMessage >= currentMessages.Length)
+		{
+			Debug.Log("Ended conversation!");
+			isActive = false;
+			// CloseDialogue();
+		}
+		else
+		{
+			DisplayMessage();
+		}
+	}
+
+	void Start()
 	{
 
+	}
+
+
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Space) && isActive)
+			NextMessage();
 	}
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -28,6 +29,13 @@ public class DialogueManager : MonoBehaviour
 
 		Debug.Log("Started conversation! Loaded messages: " + messages.Length);
 		DisplayMessage();
+		backgroundBox.LeanScale(Vector3.one, 0.2f).setEaseInOutExpo();
+	}
+
+	void AnimateTextColor()
+	{
+		LeanTween.textAlpha(messageText.rectTransform, 0, 0);
+		LeanTween.textAlpha(messageText.rectTransform, 1, 0.5f);
 	}
 
 	void DisplayMessage()
@@ -38,6 +46,7 @@ public class DialogueManager : MonoBehaviour
 		Actor actorToDisplay = currentActors[messageToDisplay.actorId];
 		actorName.text = actorToDisplay.name;
 		actorImage.sprite = actorToDisplay.sprite;
+		AnimateTextColor(); //NOT WORKING CHECK
 	}
 
 	public void NextMessage()
@@ -46,8 +55,8 @@ public class DialogueManager : MonoBehaviour
 		if (activeMessage >= currentMessages.Length)
 		{
 			Debug.Log("Ended conversation!");
+			backgroundBox.LeanScale(Vector3.zero, 0.2f).setEaseInOutExpo();
 			isActive = false;
-			// CloseDialogue();
 		}
 		else
 		{
@@ -57,7 +66,7 @@ public class DialogueManager : MonoBehaviour
 
 	void Start()
 	{
-
+		backgroundBox.transform.localScale = Vector3.zero;
 	}
 
 

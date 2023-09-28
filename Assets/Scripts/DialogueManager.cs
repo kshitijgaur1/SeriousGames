@@ -2,63 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour {
 
-	public Text nameText;
-	public Text dialogueText;
+	public Image actorImage;
+	public TextMeshProUGUI actorName;
+	public TextMeshProUGUI messageText;
+	public RectTransform backgroundBox;
 
-	public Animator animator;
+	Message[] currentMessages;
+	Actor[] currentActors;
+	int activeMessage = 0;
 
-	private Queue<string> sentences;
+	public void OpenDialogue(Message[] messages, Actor[] actors) {
+		currentMessages = messages;
+		currentActors = actors;
+		activeMessage = 0;
 
-	// Use this for initialization
+		Debug.Log("Started conversation! Loaded messages: " + messages.Length);
+	}
+	
 	void Start () {
-		sentences = new Queue<string>();
+		
 	}
 
-	public void StartDialogue (Dialogue dialogue)
+	
+	void Update ()
 	{
-		animator.SetBool("IsOpen", true);
 
-		nameText.text = dialogue.name;
-
-		sentences.Clear();
-
-		foreach (string sentence in dialogue.sentences)
-		{
-			sentences.Enqueue(sentence);
-		}
-
-		DisplayNextSentence();
 	}
-
-	public void DisplayNextSentence ()
-	{
-		if (sentences.Count == 0)
-		{
-			EndDialogue();
-			return;
-		}
-
-		string sentence = sentences.Dequeue();
-		StopAllCoroutines();
-		StartCoroutine(TypeSentence(sentence));
-	}
-
-	IEnumerator TypeSentence (string sentence)
-	{
-		dialogueText.text = "";
-		foreach (char letter in sentence.ToCharArray())
-		{
-			dialogueText.text += letter;
-			yield return null;
-		}
-	}
-
-	void EndDialogue()
-	{
-		animator.SetBool("IsOpen", false);
-	}
-
 }

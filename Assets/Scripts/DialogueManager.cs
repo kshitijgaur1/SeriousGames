@@ -12,6 +12,8 @@ public class DialogueManager : MonoBehaviour
 	public TextMeshProUGUI actorName;
 	public TextMeshProUGUI messageText;
 	public RectTransform backgroundBox;
+	Rigidbody2D playerRigidbody;
+	PlayerMovement playerMovement;
 
 	Message[] currentMessages;
 	Actor[] currentActors;
@@ -25,7 +27,12 @@ public class DialogueManager : MonoBehaviour
 		currentMessages = messages;
 		currentActors = actors;
 		activeMessage = 0;
+		
+		
 		isActive = true;
+		// playerRigidbody.bodyType = RigidbodyType2D.Static;
+		playerMovement.animator.SetBool("IsMoving", false);
+		playerMovement.enabled = false;
 
 		Debug.Log("Started conversation! Loaded messages: " + messages.Length);
 		DisplayMessage();
@@ -56,6 +63,9 @@ public class DialogueManager : MonoBehaviour
 		{
 			Debug.Log("Ended conversation!");
 			backgroundBox.LeanScale(Vector3.zero, 0.2f).setEaseInOutExpo();
+			// playerRigidbody.bodyType = RigidbodyType2D.Kinematic;
+			playerMovement.animator.SetBool("IsMoving", true);
+			playerMovement.enabled = true;
 			isActive = false;
 		}
 		else
@@ -67,6 +77,9 @@ public class DialogueManager : MonoBehaviour
 	void Start()
 	{
 		backgroundBox.transform.localScale = Vector3.zero;
+		playerRigidbody = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+		playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+		
 	}
 
 

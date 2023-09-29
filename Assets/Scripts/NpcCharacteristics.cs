@@ -19,9 +19,19 @@ public class NpcCharacteristics : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Triggered Collider");
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Triggered Collider");
+            // GetComponent<DialogueTrigger>().StartDialog();
+        }
+
+    }
+    
+    void OnTriggerStay2D(Collider2D other)
+    {
+        Debug.Log("Triggered Collider Stay");
+        if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.Space))
+        {
             GetComponent<DialogueTrigger>().StartDialog();
         }
 

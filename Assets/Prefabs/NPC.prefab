@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 88793850989324645}
   - component: {fileID: 3771557300435048202}
   m_Layer: 3
-  m_Name: NPC 1
+  m_Name: NPC
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,13 +102,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorId: 1
-    message: Hello
+    message: Hello!
   - actorId: 0
-    message: Hi Grandma
+    message: Hello Grandma!
   - actorId: 1
     message: Please, help me find photo
   - actorId: 0
-    message: Ok, I will do it.
+    message: OK, I will do it.
   actors:
   - name: Govind
     sprite: {fileID: 21300000, guid: 5b2c0b93f5a4620e98ed0ae08d34fcd4, type: 3}
@@ -198,3 +198,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff9826f81448a45798092b64b33fd33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionDistance: 1

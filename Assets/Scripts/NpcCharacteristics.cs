@@ -6,7 +6,7 @@ using UnityEngine;
 public class NpcCharacteristics : MonoBehaviour
 {
     private Transform player;
-    [SerializeField] private float interactionDistance = 1;
+    [SerializeField] private float interactionDistance = 2;
     private DialogueTrigger dialogueTrigger;
     private DialogueManager dialogueManager;
     

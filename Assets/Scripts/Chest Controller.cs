@@ -9,7 +9,7 @@ public class ChestController : MonoBehaviour
     public Sprite openChestSprite; 
     public Sprite closedChestSprite;
 
-    private bool isOpen = false;
+    public bool isOpen = false;
     public bool hasKey;
     private Transform player;
 

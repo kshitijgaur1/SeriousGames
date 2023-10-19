@@ -5,13 +5,15 @@ using UnityEngine;
 public class ChestController : MonoBehaviour
 {
     [SerializeField]
-    private float interactionDistance = 1f; // Distance at which the player can interact with the chest.
+    private float interactionDistance = 2f; // Distance at which the player can interact with the chest.
     public Sprite openChestSprite; 
     public Sprite closedChestSprite;
 
     public bool isOpen = false;
     public bool hasKey;
     private Transform player;
+    private DialogueTrigger dt;
+
 
     private SpriteRenderer spriteRenderer;
 
@@ -19,6 +21,11 @@ public class ChestController : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        GameObject npcObject = GameObject.FindGameObjectWithTag("NPC");
+        if (npcObject != null)
+        {
+            dt = npcObject.GetComponent<DialogueTrigger>();
+        }
 
         SetChestState(false);
     }
@@ -29,6 +36,7 @@ public class ChestController : MonoBehaviour
 
         if (distanceToPlayer <= interactionDistance && hasKey && Input.GetKeyDown(KeyCode.Space))
         {
+            dt.taskDone = true;
             ToggleChestState();
         }
     }

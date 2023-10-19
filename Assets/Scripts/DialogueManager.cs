@@ -17,7 +17,7 @@ public class DialogueManager : MonoBehaviour
 
 	Message[] currentMessages;
 	Actor[] currentActors;
-	int activeMessage = 0;
+	int activeMessage ;
 
 	public bool isActive = false;
 

@@ -378,6 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemScreen: {fileID: 697707855}
+  chestController: {fileID: 0}
   interactionDistance: 1
 --- !u!4 &1903009225 stripped
 Transform:
@@ -655,6 +656,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4963874577123626656, guid: 10bf733a365cfc516acf8c3fb2f41c35, type: 3}
+      propertyPath: messages2.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: 10bf733a365cfc516acf8c3fb2f41c35, type: 3}
+      propertyPath: messages2.Array.data[0].actorId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: 10bf733a365cfc516acf8c3fb2f41c35, type: 3}
+      propertyPath: messages2.Array.data[0].message
+      value: Did you find name on photo?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: 10bf733a365cfc516acf8c3fb2f41c35, type: 3}
+      propertyPath: messages2.Array.data[1].message
+      value: His name is John.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: 10bf733a365cfc516acf8c3fb2f41c35, type: 3}
+      propertyPath: messages2.Array.data[2].actorId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: 10bf733a365cfc516acf8c3fb2f41c35, type: 3}
+      propertyPath: messages2.Array.data[2].message
+      value: Ohh! Thanks.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: 10bf733a365cfc516acf8c3fb2f41c35, type: 3}
+      propertyPath: messages2.Array.data[3].message
+      value: No problem.
+      objectReference: {fileID: 0}
     - target: {fileID: 5432373374512367846, guid: 10bf733a365cfc516acf8c3fb2f41c35, type: 3}
       propertyPath: m_Name
       value: NPC 1

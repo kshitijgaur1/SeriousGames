@@ -20,9 +20,10 @@ public class DialogueManager : MonoBehaviour
 	int activeMessage ;
 
 	public bool isActive = false;
+    public UIController controller;
 
 
-	public void OpenDialogue(Message[] messages, Actor[] actors)
+    public void OpenDialogue(Message[] messages, Actor[] actors)
 	{
 		currentMessages = messages;
 		currentActors = actors;
@@ -67,6 +68,12 @@ public class DialogueManager : MonoBehaviour
 			playerMovement.animator.SetBool("IsMoving", true);
 			playerMovement.enabled = true;
 			isActive = false;
+			DialogueTrigger dt = FindObjectOfType<DialogueTrigger>();
+			if (dt.taskDone)
+			{
+				controller = FindObjectOfType<UIController>();
+				controller.ShowCanvas();
+			}
 		}
 		else
 		{

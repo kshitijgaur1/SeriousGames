@@ -169,7 +169,7 @@ RectTransform:
   - {fileID: 3725757100946702989}
   - {fileID: 8162753828326306364}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -336,6 +336,7 @@ MonoBehaviour:
   messageText: {fileID: 8681611889795021945}
   backgroundBox: {fileID: 3725757100946702989}
   isActive: 0
+  controllerGuideline: {fileID: 0}
 --- !u!1 &5824338537154938101
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,11 +493,13 @@ MonoBehaviour:
     message: Please, help me find photo
   - actorId: 0
     message: OK, I will do it.
+  messages2: []
   actors:
   - name: Govind
     sprite: {fileID: 21300000, guid: 5b2c0b93f5a4620e98ed0ae08d34fcd4, type: 3}
   - name: Grandma
     sprite: {fileID: 21300000, guid: eb585d2f90d537028999d28260ecbcf1, type: 3}
+  taskDone: 0
 --- !u!1 &5825186210272886507
 GameObject:
   m_ObjectHideFlags: 0

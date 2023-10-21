@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIController : MonoBehaviour
+public class UIController: MonoBehaviour
 {
+    [SerializeField]public Canvas canvas;
     // Start is called before the first frame update
-    public Canvas canvas;
     void Start()
     {
         canvas.enabled = false;
@@ -20,6 +20,7 @@ public class UIController : MonoBehaviour
     {
         canvas.enabled = false;
     }
+    
 
     public void BtnClicked()
     {

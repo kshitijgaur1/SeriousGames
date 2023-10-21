@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.Serialization;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -20,7 +22,7 @@ public class DialogueManager : MonoBehaviour
 	int activeMessage ;
 
 	public bool isActive = false;
-    public UIController controller;
+    [FormerlySerializedAs("controller")] public UIControllerGuideline controllerGuideline;
 
 
     public void OpenDialogue(Message[] messages, Actor[] actors)
@@ -71,8 +73,8 @@ public class DialogueManager : MonoBehaviour
 			DialogueTrigger dt = FindObjectOfType<DialogueTrigger>();
 			if (dt.taskDone)
 			{
-				controller = FindObjectOfType<UIController>();
-				controller.ShowCanvas();
+				controllerGuideline = FindObjectOfType<UIControllerGuideline>();
+				controllerGuideline.ShowCanvas();
 			}
 		}
 		else

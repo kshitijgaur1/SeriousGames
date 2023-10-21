@@ -9,7 +9,7 @@ public class RemoteCanvasHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        resultText.text = "Press Button";
     }
 
     // Update is called once per frame

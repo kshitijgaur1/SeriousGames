@@ -7,6 +7,8 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.Serialization;
 
+//TODO : ADD SOME OTHER WAY TO OPEN AND CLOSE DIALOG BOXES, ERROR MOSTLY DUE TO LEAN TWEEN LIBRARY
+
 public class DialogueManager : MonoBehaviour
 {
 

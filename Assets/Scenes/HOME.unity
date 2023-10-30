@@ -342,12 +342,24 @@ PrefabInstance:
       value: Grandpa
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: messages.Array.data[0].actorId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[1].message
       value: Hello Grandpa!
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: messages.Array.data[2].actorId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[2].message
       value: I cant hear anything properly can you help me?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: messages2.Array.data[0].actorId
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages2.Array.data[0].message
@@ -516,6 +528,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3865421155800867608, guid: 1f9fe557c894908cfb359c6ac35afa68, type: 3}
   m_PrefabInstance: {fileID: 216652512042566292}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1313579883 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9007751475652051010, guid: 1f9fe557c894908cfb359c6ac35afa68, type: 3}
+  m_PrefabInstance: {fileID: 216652512042566292}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313579879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99542030de32ea341a8155c10ef6c146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1465235671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -767,7 +790,16 @@ PrefabInstance:
       propertyPath: itemScreen
       value: 
       objectReference: {fileID: 697707855}
-    m_RemovedComponents: []
+    - target: {fileID: 6439873520492140639, guid: 1f9fe557c894908cfb359c6ac35afa68, type: 3}
+      propertyPath: chestController
+      value: 
+      objectReference: {fileID: 1313579883}
+    - target: {fileID: 9007751475652051010, guid: 1f9fe557c894908cfb359c6ac35afa68, type: 3}
+      propertyPath: itemScreen
+      value: 
+      objectReference: {fileID: 697707855}
+    m_RemovedComponents:
+    - {fileID: 6439873520492140639, guid: 1f9fe557c894908cfb359c6ac35afa68, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

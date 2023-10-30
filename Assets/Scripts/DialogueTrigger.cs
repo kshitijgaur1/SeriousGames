@@ -11,6 +11,7 @@ public class DialogueTrigger : MonoBehaviour {
 
     public void StartDialog()
     {
+		Debug.Log(taskDone);
 		if (!taskDone)
 		{
 			FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors);

@@ -6,7 +6,7 @@ public class ChestController : MonoBehaviour
 {
     [SerializeField]
     private float interactionDistance = 2f; // Distance at which the player can interact with the chest.
-    public Sprite openChestSprite; 
+    public Sprite openChestSprite;
     public Sprite closedChestSprite;
 
     public bool isOpen = false;
@@ -14,18 +14,24 @@ public class ChestController : MonoBehaviour
     private Transform player;
     private DialogueTrigger dt;
 
+    public RectTransform itemScreen; // Reference to the item screen.
 
     private SpriteRenderer spriteRenderer;
+    private PlayerMovement playerMovement;
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent <SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         GameObject npcObject = GameObject.FindGameObjectWithTag("NPC");
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent <PlayerMovement>();
+
         if (npcObject != null)
         {
             dt = npcObject.GetComponent<DialogueTrigger>();
         }
+
+        itemScreen.localScale = Vector3.zero; // Initialize item screen to be hidden.
 
         SetChestState(false);
     }
@@ -52,10 +58,24 @@ public class ChestController : MonoBehaviour
         if (open)
         {
             spriteRenderer.sprite = openChestSprite;
+            OpenImage(); // Call the OpenImage method to display the item screen.
         }
         else
         {
             spriteRenderer.sprite = closedChestSprite;
+            CloseImage(); // Call the CloseImage method to hide the item screen.
         }
+    }
+
+    private void OpenImage()
+    {
+        itemScreen.LeanScale(Vector3.one, 0.2f).setEaseInOutExpo();
+        playerMovement.enabled = false;
+    }
+
+    private void CloseImage()
+    {
+        itemScreen.LeanScale(Vector3.zero, 0.2f).setEaseInOutExpo();
+        playerMovement.enabled = true;
     }
 }

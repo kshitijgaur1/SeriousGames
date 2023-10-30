@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPC
+  - Grandma
+  - Grandpa
   layers:
   - Default
   - TransparentFX

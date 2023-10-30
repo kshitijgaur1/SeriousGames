@@ -6,10 +6,16 @@ using UnityEngine;
 public class RemoteCanvasHandler : MonoBehaviour
 {
     [SerializeField]TextMeshProUGUI resultText;
+    private DialogueTrigger dt;
     // Start is called before the first frame update
     void Start()
     {
         resultText.text = "Press Button";
+        GameObject npcObject = GameObject.FindGameObjectWithTag("Grandpa");
+        if (npcObject != null)
+        {
+            dt = npcObject.GetComponent<DialogueTrigger>();
+        }
     }
 
     // Update is called once per frame
@@ -26,5 +32,6 @@ public class RemoteCanvasHandler : MonoBehaviour
     public void CaptionButtonClicked()
     {
         resultText.text = "Hehe Caption";
+        dt.taskDone = true;
     }
 }

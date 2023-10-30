@@ -343,7 +343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[0].actorId
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[1].message
@@ -351,7 +351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[2].actorId
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[2].message
@@ -359,7 +359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages2.Array.data[0].actorId
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages2.Array.data[0].message
@@ -371,6 +371,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5432373374512367846, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: m_Name
+      value: Grandpa
+      objectReference: {fileID: 0}
+    - target: {fileID: 5432373374512367846, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: m_TagString
       value: Grandpa
       objectReference: {fileID: 0}
     - target: {fileID: 7151106943460928945, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
@@ -1167,6 +1171,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5432373374512367846, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: m_Name
+      value: Grandma
+      objectReference: {fileID: 0}
+    - target: {fileID: 5432373374512367846, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: m_TagString
       value: Grandma
       objectReference: {fileID: 0}
     - target: {fileID: 7151106943460928945, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}

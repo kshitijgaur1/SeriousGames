@@ -23,7 +23,7 @@ public class ChestController : MonoBehaviour
     {
         spriteRenderer = GetComponent <SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        GameObject npcObject = GameObject.FindGameObjectWithTag("NPC");
+        GameObject npcObject = GameObject.FindGameObjectWithTag("Grandma");
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent <PlayerMovement>();
 
         if (npcObject != null)

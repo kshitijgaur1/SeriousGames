@@ -1129,6 +1129,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4287492550062766364, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5432373374512367846, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: m_Name
       value: Grandma

@@ -22,9 +22,16 @@ public class NpcCharacteristics : MonoBehaviour
     void Update()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        if (distanceToPlayer <= interactionDistance && Input.GetKeyDown(KeyCode.Space) && dialogueManager.isActive == false)
+        if (distanceToPlayer <= interactionDistance && Input.GetKeyDown(KeyCode.Space))
         {
-            dialogueTrigger.StartDialog();
+            if (dialogueManager.isActive == false)
+            {
+                dialogueTrigger.StartDialog();
+            }
+            else
+            {
+                dialogueManager.NextMessage();
+            }
         }
     }
 

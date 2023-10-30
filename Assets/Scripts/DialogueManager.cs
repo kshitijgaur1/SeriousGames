@@ -21,7 +21,7 @@ public class DialogueManager : MonoBehaviour
 
 	Message[] currentMessages;
 	Actor[] currentActors;
-	int activeMessage ;
+	int activeMessage=0;
 
 	public bool isActive = false;
     [FormerlySerializedAs("controller")] public UIControllerGuideline controllerGuideline;
@@ -94,9 +94,9 @@ public class DialogueManager : MonoBehaviour
 	}
 
 
-	void Update()
+	/*void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.Space) && isActive)
 			NextMessage();
-	}
+	}*/
 }

@@ -438,6 +438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Image Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4586530697792755088, guid: 1e37ffcd077751f3b81765ae88ae4678, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b585f1eada91dd419dfa28cb43f60c9, type: 3}
     - target: {fileID: 6143870667031142754, guid: 1e37ffcd077751f3b81765ae88ae4678, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1168,6 +1172,10 @@ PrefabInstance:
     - target: {fileID: 4287492550062766364, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: messages.Array.data[2].message
+      value: Please, help me find name of boy in middle in family picture.
       objectReference: {fileID: 0}
     - target: {fileID: 5432373374512367846, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: m_Name

@@ -1163,6 +1163,10 @@ PrefabInstance:
       propertyPath: m_Color.g
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2157035504791109238, guid: c6b503db2c93450aab8595a377e91559, type: 3}
+      propertyPath: m_TagString
+      value: Power Button
+      objectReference: {fileID: 0}
     - target: {fileID: 2521012052330293911, guid: c6b503db2c93450aab8595a377e91559, type: 3}
       propertyPath: m_Color.b
       value: 1

@@ -7,6 +7,7 @@ TagManager:
   - NPC
   - Grandma
   - Grandpa
+  - Power Button
   layers:
   - Default
   - TransparentFX

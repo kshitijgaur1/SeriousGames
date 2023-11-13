@@ -9,7 +9,7 @@ public class UIController : MonoBehaviour
     PlayerMovement playerMovement;
 
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         canvas.enabled = false;
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();

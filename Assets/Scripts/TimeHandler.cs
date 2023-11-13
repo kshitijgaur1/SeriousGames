@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -12,13 +13,15 @@ public class TimeHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeStamp = 0;
+        timeStamp = TimeTillScene.GetTime();
     }
 
     // Update is called once per frame
     private void Update()
     {
         timeStamp += Time.deltaTime;
+        TimeTillScene.SetTime(timeStamp);
+        
         // Debug.Log(timeStamp);
         timeTextField.text = System.TimeSpan.FromSeconds(timeStamp).ToString("hh':'mm':'ss");
     }

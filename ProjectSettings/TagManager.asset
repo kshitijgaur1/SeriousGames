@@ -8,6 +8,7 @@ TagManager:
   - Grandma
   - Grandpa
   - Power Button
+  - Close Button
   layers:
   - Default
   - TransparentFX

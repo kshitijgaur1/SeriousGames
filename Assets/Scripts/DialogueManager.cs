@@ -73,6 +73,7 @@ public class DialogueManager : MonoBehaviour
 			playerMovement.enabled = true;
 			isActive = false;
 			DialogueTrigger dt = FindObjectOfType<DialogueTrigger>();
+            Deb
 			if (dt.taskDone)
 			{
 				controllerGuideline = FindObjectOfType<UIControllerGuideline>();

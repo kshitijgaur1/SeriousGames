@@ -4,19 +4,27 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class KeyboardNavigation : MonoBehaviour
+public class ExcelKeyboardNavigation : MonoBehaviour
 {
+    private bool firstClick;
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        firstClick = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.mousePresent && !firstClick)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                firstClick = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+        }
         GameObject currentPanel = GetActivePanel();
         if (currentPanel != null)
         {

@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.Serialization;
+
+//TODO : ADD SOME OTHER WAY TO OPEN AND CLOSE DIALOG BOXES, ERROR MOSTLY DUE TO LEAN TWEEN LIBRARY
 
 public class DialogueManager : MonoBehaviour
 {
@@ -17,12 +21,13 @@ public class DialogueManager : MonoBehaviour
 
 	Message[] currentMessages;
 	Actor[] currentActors;
-	int activeMessage = 0;
+	int activeMessage=0;
 
 	public bool isActive = false;
+    [FormerlySerializedAs("controller")] public UIControllerGuideline controllerGuideline;
 
 
-	public void OpenDialogue(Message[] messages, Actor[] actors)
+    public void OpenDialogue(Message[] messages, Actor[] actors)
 	{
 		currentMessages = messages;
 		currentActors = actors;
@@ -67,6 +72,13 @@ public class DialogueManager : MonoBehaviour
 			playerMovement.animator.SetBool("IsMoving", true);
 			playerMovement.enabled = true;
 			isActive = false;
+			DialogueTrigger dt = FindObjectOfType<DialogueTrigger>();
+            
+			if (dt.taskDone)
+			{
+				controllerGuideline = FindObjectOfType<UIControllerGuideline>();
+				controllerGuideline.ShowCanvas();
+			}
 		}
 		else
 		{
@@ -83,9 +95,9 @@ public class DialogueManager : MonoBehaviour
 	}
 
 
-	void Update()
+	/*void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.Space) && isActive)
 			NextMessage();
-	}
+	}*/
 }

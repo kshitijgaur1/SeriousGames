@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8623568123430889833
 SpriteRenderer:
@@ -109,11 +109,21 @@ MonoBehaviour:
     message: Please, help me find photo
   - actorId: 0
     message: OK, I will do it.
+  messages2:
+  - actorId: 1
+    message: Did you find name on photo?
+  - actorId: 0
+    message: His name is John.
+  - actorId: 1
+    message: Ohh! Thanks.
+  - actorId: 0
+    message: No problem.
   actors:
   - name: Govind
     sprite: {fileID: 21300000, guid: 5b2c0b93f5a4620e98ed0ae08d34fcd4, type: 3}
   - name: Grandma
     sprite: {fileID: 21300000, guid: eb585d2f90d537028999d28260ecbcf1, type: 3}
+  taskDone: 0
 --- !u!61 &4287492550062766364
 BoxCollider2D:
   m_ObjectHideFlags: 0

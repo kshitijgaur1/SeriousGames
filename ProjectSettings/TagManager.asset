@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPC
+  - Grandma
+  - Grandpa
+  - Power Button
+  - Close Button
   layers:
   - Default
   - TransparentFX

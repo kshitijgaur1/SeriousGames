@@ -1374,7 +1374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: -1
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -6431,7 +6431,6 @@ RectTransform:
   - {fileID: 353135592}
   - {fileID: 407211399}
   - {fileID: 472687670}
-  - {fileID: 238966306}
   - {fileID: 484341787}
   - {fileID: 1736296045}
   - {fileID: 112509374}
@@ -6492,6 +6491,7 @@ RectTransform:
   - {fileID: 485521602}
   - {fileID: 1048374223}
   - {fileID: 1922052982}
+  - {fileID: 238966306}
   m_Father: {fileID: 47795575}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

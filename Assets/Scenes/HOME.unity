@@ -375,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: actors.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages2.Array.size
@@ -383,7 +383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: actors.Array.data[1].name
-      value: Grandma
+      value: Grandpa
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: actors.Array.data[2].name
@@ -1761,7 +1761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: actors.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: actors.Array.data[2].name
@@ -1773,11 +1773,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: eb585d2f90d537028999d28260ecbcf1, type: 3}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[0].actorId
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[2].actorId
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[2].message

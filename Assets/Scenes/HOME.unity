@@ -360,6 +360,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: text1
+      value: You have completed task based on Guideline 1.2.2 - Captions (Prerecorded)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: text2
+      value: Captions are provided for all prerecorded audio content in synchronized
+        media, except when the media is a media alternative for text and is clearly
+        labeled as such.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: interactionDistance
       value: 2
       objectReference: {fileID: 0}
@@ -824,6 +834,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1814903874 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3033498101856612273, guid: 377c12844e87a104aa926e8a96cc3197, type: 3}
+  m_PrefabInstance: {fileID: 7477632469451120959}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1903009225 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2462699947368914073, guid: e3738b35631b71ed3a44055c1b0b9df0, type: 3}
@@ -838,6 +859,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1914820830 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1679208976626892718, guid: 377c12844e87a104aa926e8a96cc3197, type: 3}
+  m_PrefabInstance: {fileID: 7477632469451120959}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1916856335
@@ -1710,6 +1742,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: text1
+      value: You have completed task based on Guideline 1.1.1 - Text Alternative
+      objectReference: {fileID: 0}
+    - target: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: text2
+      value: All informative and functional non-text content such as images, icons,
+        charts, image maps etc must have alternative text that describes the meaning
+        or purpose.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: interactionDistance
       value: 2
       objectReference: {fileID: 0}
@@ -1988,6 +2030,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6045455934855963915, guid: 377c12844e87a104aa926e8a96cc3197, type: 3}
+      propertyPath: text1
+      value: 
+      objectReference: {fileID: 1814903874}
+    - target: {fileID: 6045455934855963915, guid: 377c12844e87a104aa926e8a96cc3197, type: 3}
+      propertyPath: text2
+      value: 
+      objectReference: {fileID: 1914820830}
     - target: {fileID: 6107662658806148467, guid: 377c12844e87a104aa926e8a96cc3197, type: 3}
       propertyPath: m_Pivot.x
       value: 0

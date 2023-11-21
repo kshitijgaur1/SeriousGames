@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NpcCharacteristics : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class NpcCharacteristics : MonoBehaviour
     private DialogueTrigger dialogueTrigger;
     private DialogueManager dialogueManager;
     public bool taskDone = false;
+    public string text1;
+    public string text2;
     
     // Start is called before the first frame update
     void Start()

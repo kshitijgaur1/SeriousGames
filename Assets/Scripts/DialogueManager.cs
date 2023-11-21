@@ -79,7 +79,7 @@ public class DialogueManager : MonoBehaviour
 			if (nc.taskDone)
 			{
 				controllerGuideline = FindObjectOfType<UIControllerGuideline>();
-				controllerGuideline.ShowCanvas();
+				controllerGuideline.ShowCanvas(nc);
 			}
 		}
 		else

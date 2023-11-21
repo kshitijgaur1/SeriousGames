@@ -9,6 +9,7 @@ public class NpcCharacteristics : MonoBehaviour
     [SerializeField] private float interactionDistance = 2;
     private DialogueTrigger dialogueTrigger;
     private DialogueManager dialogueManager;
+    public bool taskDone = false;
     
     // Start is called before the first frame update
     void Start()

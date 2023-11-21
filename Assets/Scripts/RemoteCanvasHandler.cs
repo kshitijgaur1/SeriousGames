@@ -6,7 +6,7 @@ using UnityEngine;
 public class RemoteCanvasHandler : MonoBehaviour
 {
     [SerializeField]TextMeshProUGUI resultText;
-    private DialogueTrigger dt;
+    private NpcCharacteristics nc;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +14,7 @@ public class RemoteCanvasHandler : MonoBehaviour
         GameObject npcObject = GameObject.FindGameObjectWithTag("Grandpa");
         if (npcObject != null)
         {
-            dt = npcObject.GetComponent<DialogueTrigger>();
+            nc = npcObject.GetComponent<NpcCharacteristics>();
         }
     }
 
@@ -32,6 +32,6 @@ public class RemoteCanvasHandler : MonoBehaviour
     public void CaptionButtonClicked()
     {
         resultText.text = "Hehe Caption";
-        dt.taskDone = true;
+        nc.taskDone = true;
     }
 }

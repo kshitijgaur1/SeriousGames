@@ -7,18 +7,18 @@ public class DialogueTrigger : MonoBehaviour {
 	public Message[] messages;
 	public Message[] messages2;
 	public Actor[] actors;
-	public bool taskDone=false;
+	// public bool taskDone=false;
 
     public void StartDialog()
     {
-		Debug.Log(taskDone);
-		if (!taskDone)
+		NpcCharacteristics nc = GetComponent<NpcCharacteristics>();
+		if (!nc.taskDone)
 		{
-			FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors);
+			FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors, nc);
 		}
 		else
 		{
-            FindObjectOfType<DialogueManager>().OpenDialogue(messages2, actors);
+            FindObjectOfType<DialogueManager>().OpenDialogue(messages2, actors, nc);
         }
     }
 

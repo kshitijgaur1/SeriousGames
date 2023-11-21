@@ -359,6 +359,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: interactionDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: actors.Array.size
       value: 3
@@ -1705,6 +1709,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: interactionDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4287492550062766364, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: m_IsTrigger
       value: 0

@@ -12,7 +12,7 @@ public class ChestController : MonoBehaviour
     public bool isOpen = false;
     public bool hasKey;
     private Transform player;
-    private DialogueTrigger dt;
+    private NpcCharacteristics nc;
 
     public RectTransform itemScreen; // Reference to the item screen.
 
@@ -28,7 +28,7 @@ public class ChestController : MonoBehaviour
 
         if (npcObject != null)
         {
-            dt = npcObject.GetComponent<DialogueTrigger>();
+            nc = npcObject.GetComponent<NpcCharacteristics>();
         }
 
         itemScreen.localScale = Vector3.zero; // Initialize item screen to be hidden.
@@ -42,7 +42,7 @@ public class ChestController : MonoBehaviour
 
         if (distanceToPlayer <= interactionDistance && hasKey && Input.GetKeyDown(KeyCode.Space))
         {
-            dt.taskDone = true;
+            nc.taskDone = true;
             ToggleChestState();
         }
     }

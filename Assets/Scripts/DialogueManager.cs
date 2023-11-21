@@ -19,18 +19,21 @@ public class DialogueManager : MonoBehaviour
 	Rigidbody2D playerRigidbody;
 	PlayerMovement playerMovement;
 
-	Message[] currentMessages;
+
+    Message[] currentMessages;
 	Actor[] currentActors;
+	NpcCharacteristics nc;
 	int activeMessage=0;
 
 	public bool isActive = false;
     [FormerlySerializedAs("controller")] public UIControllerGuideline controllerGuideline;
 
 
-    public void OpenDialogue(Message[] messages, Actor[] actors)
+    public void OpenDialogue(Message[] messages, Actor[] actors, NpcCharacteristics npcC)
 	{
 		currentMessages = messages;
 		currentActors = actors;
+		nc = npcC;
 		activeMessage = 0;
 		
 		
@@ -72,9 +75,8 @@ public class DialogueManager : MonoBehaviour
 			playerMovement.animator.SetBool("IsMoving", true);
 			playerMovement.enabled = true;
 			isActive = false;
-			DialogueTrigger dt = FindObjectOfType<DialogueTrigger>();
-            
-			if (dt.taskDone)
+			
+			if (nc.taskDone)
 			{
 				controllerGuideline = FindObjectOfType<UIControllerGuideline>();
 				controllerGuideline.ShowCanvas();

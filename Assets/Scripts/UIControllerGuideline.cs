@@ -9,6 +9,7 @@ namespace DefaultNamespace
         private GameObject closeButton;
         public Text text1;
         public Text text2;
+        NpcCharacteristics characteristics;
 
         void Start()
         {
@@ -18,10 +19,17 @@ namespace DefaultNamespace
 
         public void ShowCanvas(NpcCharacteristics nc)
         {
+            characteristics = nc;
             text1.text = nc.text1;
             text2.text = nc.text2;
             base.ShowCanvas();
             EventSystem.current.SetSelectedGameObject(closeButton);
+        }
+
+        public void BtnClicked()
+        {
+            base.HideCanvas();
+            characteristics.guidelineRead = true;
         }
     }
 }

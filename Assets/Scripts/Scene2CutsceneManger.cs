@@ -27,6 +27,7 @@ public class Scene2CutsceneManger : MonoBehaviour
 
     IEnumerator StartCutscene()
     {
+        yield return new WaitForSeconds(2f);
         Debug.Log("Cutscene");
         canvas.enabled = true;
         if (cutsceneDirector != null)

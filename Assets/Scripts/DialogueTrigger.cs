@@ -1,13 +1,16 @@
+using DefaultNamespace;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class DialogueTrigger : MonoBehaviour {
 
 	public Message[] messages;
 	public Message[] messages2;
 	public Actor[] actors;
-	// public bool taskDone=false;
+    // public bool taskDone=false;
+    [FormerlySerializedAs("controller")] public UIControllerGuideline controllerGuideline;
 
     public void StartDialog()
     {
@@ -18,7 +21,15 @@ public class DialogueTrigger : MonoBehaviour {
 		}
 		else
 		{
-            FindObjectOfType<DialogueManager>().OpenDialogue(messages2, actors, nc);
+			if (!nc.guidelineRead)
+			{
+				FindObjectOfType<DialogueManager>().OpenDialogue(messages2, actors, nc);
+            }
+            else
+			{
+                controllerGuideline = FindObjectOfType<UIControllerGuideline>();
+                controllerGuideline.ShowCanvas(nc);
+            }
         }
     }
 

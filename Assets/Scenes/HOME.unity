@@ -704,6 +704,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: messages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages2.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -724,8 +728,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: messages.Array.data[0].message
+      value: "Ah, you\u2019re home already! Can you help me out for a moment, Govind?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[1].message
-      value: Hello Grandpa!
+      value: What do you need, Grandpa?
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[2].actorId
@@ -733,7 +741,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[2].message
-      value: I cant hear anything properly can you help me?
+      value: "I can\u2019t hear anything the tv is saying! Could you help me with
+        it?"
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages2.Array.data[0].actorId
@@ -741,11 +750,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages2.Array.data[0].message
-      value: Thanks a lot for helping me
+      value: I can see the words written out! Thank you so much!
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages2.Array.data[1].message
-      value: My Pleasure
+      value: "You\u2019re welcome, Grandpa!"
       objectReference: {fileID: 0}
     - target: {fileID: 5432373374512367846, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: m_Name
@@ -2501,12 +2510,43 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: messages.Array.data[0].message
+      value: "It\u2019s so good to see you again, Govind!  I know you\u2019ve just
+        come, but can you do a small favor for me?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: messages.Array.data[1].message
+      value: Sure, grandma, what is it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[2].actorId
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[2].message
-      value: Please, help me find name of boy in middle in family picture.
+      value: "There\u2019s a photo kept somewhere. My memory\u2019s fading these
+        days\u2026 I need your help identifying the boy in the middle of the family
+        picture."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: messages.Array.data[3].message
+      value: Sure, I will help find it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: messages2.Array.data[0].message
+      value: Did you find out his name?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: messages2.Array.data[1].message
+      value: Yes! It was written on the photo. His name is John.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: messages2.Array.data[2].message
+      value: Oh! Thank you so much!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: messages2.Array.data[3].message
+      value: "You\u2019re welcome, Grandma!"
       objectReference: {fileID: 0}
     - target: {fileID: 5432373374512367846, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: m_Name

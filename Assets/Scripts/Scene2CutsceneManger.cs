@@ -10,6 +10,7 @@ public class Scene2CutsceneManger : MonoBehaviour
     public NpcCharacteristics npc2;
     bool cutsceneStarted = false;
     public PlayableDirector cutsceneDirector;
+    // private float timeWhen2TaskOver;
 
     // Update is called once per frame
     private void Start()
@@ -19,10 +20,20 @@ public class Scene2CutsceneManger : MonoBehaviour
 
     void Update()
     {
-        if (!cutsceneStarted && npc1.guidelineRead && npc2.guidelineRead && !npc1.dialogueManager.isActive && !npc2.dialogueManager.isActive) {
+        if (!cutsceneStarted && npc1.guidelineRead && npc2.guidelineRead && !npc1.dialogueManager.isActive && !npc2.dialogueManager.isActive)
+        {
+            // timeWhen2TaskOver = TimeTillScene.GetTime();
             cutsceneStarted = true;
             StartCoroutine(StartCutscene());
         }
+        
+        // Debug.Log("Time: " + (TimeTillScene.GetTime() - timeWhen2TaskOver));
+        
+        // if (!cutsceneStarted && npc1.guidelineRead && npc2.guidelineRead && !npc1.dialogueManager.isActive && !npc2.dialogueManager.isActive && TimeTillScene.GetTime() - timeWhen2TaskOver > 4f)
+        // {
+        //     cutsceneStarted = true;
+        //     StartCoroutine(StartCutscene());
+        // }
     }
 
     IEnumerator StartCutscene()

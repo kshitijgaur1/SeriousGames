@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ReadName : MonoBehaviour
 {
-    public string platerName;
+    public static string playerName = "PlayerName";
 
     public void readNameInput(string name)
     {
-        platerName = name;
+        playerName = name;
     }
 
     public void PlayGame()

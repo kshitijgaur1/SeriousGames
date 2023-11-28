@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
 	public bool isActive = false;
     [FormerlySerializedAs("controller")] public UIControllerGuideline controllerGuideline;
 
-
+	
     public void OpenDialogue(Message[] messages, Actor[] actors, NpcCharacteristics npcC)
 	{
 		currentMessages = messages;
@@ -56,10 +56,13 @@ public class DialogueManager : MonoBehaviour
 	void DisplayMessage()
 	{
 		Message messageToDisplay = currentMessages[activeMessage];
-		messageText.text = messageToDisplay.message;
+		string formattedMessage = ReplaceVariables(messageToDisplay.message);
+
+		messageText.text = formattedMessage;
 
 		Actor actorToDisplay = currentActors[messageToDisplay.actorId];
-		actorName.text = actorToDisplay.name;
+        string formattedName = ReplaceVariables(actorToDisplay.name);
+        actorName.text = formattedName;
 		actorImage.sprite = actorToDisplay.sprite;
 		AnimateTextColor(); //NOT WORKING CHECK
 	}
@@ -87,6 +90,11 @@ public class DialogueManager : MonoBehaviour
 			DisplayMessage();
 		}
 	}
+
+	string ReplaceVariables(string message)
+	{
+        return message.Replace("{PlayerName}", ReadName.playerName);
+    }
 
 	void Start()
 	{

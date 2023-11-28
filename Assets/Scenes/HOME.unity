@@ -813,6 +813,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: actors.Array.data[0].name
+      value: '{PlayerName}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: actors.Array.data[1].name
       value: Grandpa
       objectReference: {fileID: 0}
@@ -830,7 +834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[0].message
-      value: "Ah, you\u2019re home already! Can you help me out for a moment, Govind?"
+      value: "Ah, you\u2019re home already! Can you help me out for a moment, {PlayerName}?"
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[1].message
@@ -2599,6 +2603,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: actors.Array.data[0].name
+      value: '{PlayerName}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: actors.Array.data[2].name
       value: Grandpa
       objectReference: {fileID: 0}
@@ -2612,8 +2620,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[0].message
-      value: "It\u2019s so good to see you again, Govind!  I know you\u2019ve just
-        come, but can you do a small favor for me?"
+      value: "It\u2019s so good to see you again, {PlayerName}!  I know you\u2019ve
+        just come, but can you do a small favor for me?"
       objectReference: {fileID: 0}
     - target: {fileID: 4963874577123626656, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: messages.Array.data[1].message

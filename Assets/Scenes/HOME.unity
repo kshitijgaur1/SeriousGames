@@ -438,7 +438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4725069238844189549, guid: ea860799d8dcc0b99a9d03a9780a9c5c, type: 3}
       propertyPath: m_Name
-      value: Close Button Controls Hint
+      value: Close Button
       objectReference: {fileID: 0}
     - target: {fileID: 4725069238844189549, guid: ea860799d8dcc0b99a9d03a9780a9c5c, type: 3}
       propertyPath: m_TagString
@@ -709,6 +709,7 @@ MonoBehaviour:
   canvas: {fileID: 555102745}
   npc1: {fileID: 3958040232096479702}
   npc2: {fileID: 1179028078}
+  cutsceneStarted: 0
   cutsceneDirector: {fileID: 555102742}
 --- !u!1 &694251922
 GameObject:
@@ -1598,7 +1599,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf6823a0586a7fb40bc9614972701b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionDistance: 2
+  cutsceneCanvas: {fileID: 555102745}
+  interactionDistance: 4
 --- !u!114 &1737762293 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 654033226312444621, guid: c6b503db2c93450aab8595a377e91559, type: 3}

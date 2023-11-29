@@ -49,7 +49,7 @@ public class NpcCharacteristics : MonoBehaviour
         
         if(guidelineRead && npc2object != null)
             npc2object.SetActive(true);
-        if(guidelineRead && npc2object== null)
+        if(guidelineRead && npc2object == null)
             remote.SetActive(false);
     }
 

@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 9007751475652051010}
   - component: {fileID: 1516867456458699218}
   - component: {fileID: 8228987740782532934}
-  - component: {fileID: 6439873520492140639}
   m_Layer: 3
-  m_Name: Chest
+  m_Name: Chest 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,6 +104,7 @@ MonoBehaviour:
   closedChestSprite: {fileID: -1581850936, guid: 51b0bc6720e59bd4dacd94a859f72edc, type: 3}
   isOpen: 0
   hasKey: 0
+  itemScreen: {fileID: 0}
 --- !u!61 &1516867456458699218
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -177,18 +177,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6439873520492140639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3865421155800867608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92aaf3d9613cb027bdac4e65861e015, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemScreen: {fileID: 0}
-  chestController: {fileID: 0}
-  interactionDistance: 1

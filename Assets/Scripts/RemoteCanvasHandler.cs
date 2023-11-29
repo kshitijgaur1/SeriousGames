@@ -6,16 +6,11 @@ using UnityEngine;
 public class RemoteCanvasHandler : MonoBehaviour
 {
     [SerializeField]TextMeshProUGUI resultText;
-    private NpcCharacteristics nc;
+    [SerializeField]private NpcCharacteristics nc;
     // Start is called before the first frame update
     void Start()
     {
         resultText.text = "Press Button";
-        GameObject npcObject = GameObject.FindGameObjectWithTag("Grandpa");
-        if (npcObject != null)
-        {
-            nc = npcObject.GetComponent<NpcCharacteristics>();
-        }
     }
 
     // Update is called once per frame

@@ -26,7 +26,7 @@ public class RemoteCanvasHandler : MonoBehaviour
     
     public void CaptionButtonClicked()
     {
-        resultText.text = "Hehe Caption";
+        resultText.text = "Aah Caption, it can be useful";
         nc.taskDone = true;
     }
 }

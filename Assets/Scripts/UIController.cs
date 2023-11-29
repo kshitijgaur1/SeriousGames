@@ -28,7 +28,7 @@ public class UIController : MonoBehaviour
     }
 
 
-    public void BtnClicked()
+    public void CloseBtnClicked()
     {
         HideCanvas();
     }

@@ -26,9 +26,9 @@ namespace DefaultNamespace
             EventSystem.current.SetSelectedGameObject(closeButton);
         }
 
-        public void BtnClicked()
+        public void CloseBtnClicked()
         {
-            base.HideCanvas();
+            HideCanvas();
             characteristics.guidelineRead = true;
         }
     }

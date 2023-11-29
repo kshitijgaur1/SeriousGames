@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,5 +17,13 @@ public class ReadName : MonoBehaviour
     {
         
         SceneManager.LoadScene("Intro Cutscene", LoadSceneMode.Single);
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+        {
+            PlayGame();
+        }
     }
 }

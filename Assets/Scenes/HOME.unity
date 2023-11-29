@@ -872,6 +872,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -210}
   m_SizeDelta: {x: 854, y: 112}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1098797221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5432373374512367846, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+  m_PrefabInstance: {fileID: 1179028077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1179028077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -890,6 +895,10 @@ PrefabInstance:
         media, except when the media is a media alternative for text and is clearly
         labeled as such.
       objectReference: {fileID: 0}
+    - target: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: remote
+      value: 
+      objectReference: {fileID: 1712561595}
     - target: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: interactionDistance
       value: 2
@@ -1017,7 +1026,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
   m_PrefabInstance: {fileID: 1179028077}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1098797221}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eff9826f81448a45798092b64b33fd33, type: 3}
@@ -1506,6 +1515,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 65}
   m_SizeDelta: {x: 754, y: 422}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1712561595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2927160794625721721, guid: 460834d82c425a6888312a5d84ad877e, type: 3}
+  m_PrefabInstance: {fileID: 4472119900669730194}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1736037298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,6 +1821,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 471588, guid: 2496ad8ac38c84546960b7950628d657, type: 3}
   m_PrefabInstance: {fileID: 1916856335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2002308736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5432373374512367846, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+  m_PrefabInstance: {fileID: 3958040232096479701}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2037454480
 GameObject:
@@ -2819,6 +2838,18 @@ PrefabInstance:
         or purpose.
       objectReference: {fileID: 0}
     - target: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: remote
+      value: 
+      objectReference: {fileID: 1712561595}
+    - target: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: npc1object
+      value: 
+      objectReference: {fileID: 2002308736}
+    - target: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
+      propertyPath: npc2object
+      value: 
+      objectReference: {fileID: 1098797221}
+    - target: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
       propertyPath: interactionDistance
       value: 2
       objectReference: {fileID: 0}
@@ -2947,7 +2978,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3771557300435048202, guid: b14c0b2da4977eea9811fb8f9e25e2ca, type: 3}
   m_PrefabInstance: {fileID: 3958040232096479701}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2002308736}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eff9826f81448a45798092b64b33fd33, type: 3}

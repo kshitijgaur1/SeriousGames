@@ -10,7 +10,6 @@ using UnityEngine.Serialization;
 
 public class DialogueManager : MonoBehaviour
 {
-
 	public Image actorImage;
 	public TextMeshProUGUI actorName;
 	public TextMeshProUGUI messageText;
@@ -33,6 +32,8 @@ public class DialogueManager : MonoBehaviour
 		currentMessages = messages;
 		currentActors = actors;
 		nc = npcC;
+		if(nc.npc2object == null)
+			nc.remote.SetActive(true);
 		activeMessage = 0;
 		
 		

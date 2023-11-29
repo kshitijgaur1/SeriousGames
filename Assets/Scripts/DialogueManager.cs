@@ -32,7 +32,7 @@ public class DialogueManager : MonoBehaviour
 		currentMessages = messages;
 		currentActors = actors;
 		nc = npcC;
-		if(nc.npc2object == null)
+		if(nc!=null && nc.npc2object == null)
 			nc.remote.SetActive(true);
 		activeMessage = 0;
 		
@@ -79,7 +79,7 @@ public class DialogueManager : MonoBehaviour
 			playerMovement.enabled = true;
 			isActive = false;
 			
-			if (nc.taskDone)
+			if (nc!=null && nc.taskDone)
 			{
 				controllerGuideline = FindObjectOfType<UIControllerGuideline>();
 				controllerGuideline.ShowCanvas(nc);

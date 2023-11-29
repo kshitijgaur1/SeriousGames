@@ -7,11 +7,9 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.Serialization;
 
-//TODO : ADD SOME OTHER WAY TO OPEN AND CLOSE DIALOG BOXES, ERROR MOSTLY DUE TO LEAN TWEEN LIBRARY
 
 public class DialogueManager : MonoBehaviour
 {
-
 	public Image actorImage;
 	public TextMeshProUGUI actorName;
 	public TextMeshProUGUI messageText;
@@ -34,6 +32,8 @@ public class DialogueManager : MonoBehaviour
 		currentMessages = messages;
 		currentActors = actors;
 		nc = npcC;
+		if(nc!=null && nc.npc2object == null)
+			nc.remote.SetActive(true);
 		activeMessage = 0;
 		
 		
@@ -79,7 +79,7 @@ public class DialogueManager : MonoBehaviour
 			playerMovement.enabled = true;
 			isActive = false;
 			
-			if (nc.taskDone)
+			if (nc!=null && nc.taskDone)
 			{
 				controllerGuideline = FindObjectOfType<UIControllerGuideline>();
 				controllerGuideline.ShowCanvas(nc);

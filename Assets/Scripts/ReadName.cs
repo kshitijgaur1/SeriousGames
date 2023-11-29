@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ReadName : MonoBehaviour
 {
-    public static string playerName = "PlayerName";
+    public static string playerName = "Govind";
 
     public void readNameInput(string name)
     {
@@ -14,6 +14,7 @@ public class ReadName : MonoBehaviour
 
     public void PlayGame()
     {
+        
         SceneManager.LoadScene("Intro Cutscene", LoadSceneMode.Single);
     }
 }

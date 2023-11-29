@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class ChestController : MonoBehaviour
 {
+    [SerializeField] Actor[] actors;
+    [SerializeField] Message[] messages;
     [SerializeField]
+    DialogueManager dialogueManager;
     private float interactionDistance = 2f; // Distance at which the player can interact with the chest.
     public Sprite openChestSprite;
     public Sprite closedChestSprite;
@@ -12,7 +15,7 @@ public class ChestController : MonoBehaviour
     public bool isOpen = false;
     public bool hasKey;
     private Transform player;
-    private NpcCharacteristics nc;
+    [SerializeField]private NpcCharacteristics nc;
 
     public RectTransform itemScreen; // Reference to the item screen.
 
@@ -21,15 +24,15 @@ public class ChestController : MonoBehaviour
 
     private void Start()
     {
+        dialogueManager = FindObjectOfType<DialogueManager>();
+        // messages[0].message.Replace("{PlayerName}", ReadName.playerName);
         spriteRenderer = GetComponent <SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         GameObject npcObject = GameObject.FindGameObjectWithTag("Grandma");
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent <PlayerMovement>();
 
-        if (npcObject != null)
-        {
-            nc = npcObject.GetComponent<NpcCharacteristics>();
-        }
+        nc = npcObject.GetComponent<NpcCharacteristics>();
+
 
         itemScreen.localScale = Vector3.zero; // Initialize item screen to be hidden.
 
@@ -44,6 +47,23 @@ public class ChestController : MonoBehaviour
         {
             nc.taskDone = true;
             ToggleChestState();
+        }
+        
+        if(distanceToPlayer <= interactionDistance && !hasKey && Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("You need a key to open this chest");
+            if (dialogueManager.isActive == false)
+            {
+                dialogueManager.OpenDialogue(messages, actors, null);
+            }
+            else
+            {
+                dialogueManager.NextMessage();
+            }
+
+
+
+
         }
     }
 

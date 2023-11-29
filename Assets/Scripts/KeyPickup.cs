@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeyPickup : MonoBehaviour
 {
@@ -9,9 +10,12 @@ public class KeyPickup : MonoBehaviour
     [SerializeField]
     private float interactionDistance = 1f;
 
+    [SerializeField] private Image keyIconStatusBar;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        keyIconStatusBar.enabled = false;
     }
 
     private void Update()
@@ -28,6 +32,7 @@ public class KeyPickup : MonoBehaviour
             if (chestController != null)
             {
                 Debug.Log("key Picked");
+                keyIconStatusBar.enabled = true;
                 chestController.hasKey = true;
             }
 

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class ExcelKeyboardNavigation : MonoBehaviour
 {
     private bool firstClick;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class ExcelKeyboardNavigation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.mousePresent && !firstClick)
+        if (Input.mousePresent && !firstClick)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -25,30 +26,47 @@ public class ExcelKeyboardNavigation : MonoBehaviour
                 Cursor.visible = false;
             }
         }
+
         GameObject currentPanel = GetActivePanel();
         if (currentPanel != null)
         {
 
             if (Input.GetKeyDown(KeyCode.Tab))
             {
-                if (EventSystem.current.currentSelectedGameObject == null || !IsChildOfCurrentPanel(EventSystem.current.currentSelectedGameObject, currentPanel))
+                if (EventSystem.current.currentSelectedGameObject == null ||
+                    !IsChildOfCurrentPanel(EventSystem.current.currentSelectedGameObject, currentPanel))
                 {
                     // If no UI element is selected or the selected element is not in the current panel, select the first button in the current panel.
                     SelectFirstButton(currentPanel);
                 }
 
                 // Tab key pressed, navigate to the next selectable UI element in the current panel.
-                Selectable next = GetNextSelectableInPanel(EventSystem.current.currentSelectedGameObject, currentPanel);
-                if (next != null)
+                if(!Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.RightShift)){
+                    Selectable next =
+                        GetNextSelectableInPanel(EventSystem.current.currentSelectedGameObject, currentPanel);
+                    if (next != null)
+                    {
+                        next.Select();
+                    }
+                }
+
+                //Shift-Tab Reverse 
+                if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
                 {
-                    next.Select();
+                    Selectable previous =
+                        GetPreviousSelectableInPanel(EventSystem.current.currentSelectedGameObject, currentPanel);
+                    if (previous != null)
+                    {
+                        previous.Select();
+                    }
                 }
             }
 
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
             {
                 // Enter key pressed, trigger the click action on the currently selected button in the current panel.
-                ExecuteEvents.Execute(EventSystem.current.currentSelectedGameObject, new PointerEventData(EventSystem.current), ExecuteEvents.submitHandler);
+                ExecuteEvents.Execute(EventSystem.current.currentSelectedGameObject,
+                    new PointerEventData(EventSystem.current), ExecuteEvents.submitHandler);
             }
         }
     }
@@ -63,8 +81,10 @@ public class ExcelKeyboardNavigation : MonoBehaviour
                 return child.gameObject;
             }
         }
+
         return null;
     }
+
     private bool IsChildOfCurrentPanel(GameObject obj, GameObject currentPanel)
     {
         // Check if the given GameObject is a child of the current panel.
@@ -93,6 +113,24 @@ public class ExcelKeyboardNavigation : MonoBehaviour
                 return selectables[(i + 1) % selectables.Length];
             }
         }
+
         return null;
     }
+
+    private Selectable GetPreviousSelectableInPanel(GameObject currentSelected, GameObject panel)
+    {
+        // Find the previous selectable UI element in the current panel based on the current selection.
+        Selectable[] selectables = panel.GetComponentsInChildren<Selectable>();
+        for (int i = 0; i < selectables.Length; i++)
+        {
+            if (selectables[i].gameObject == currentSelected)
+            {
+                // Return the previous selectable (looping back to the last if at the start).
+                return selectables[(i - 1 + selectables.Length) % selectables.Length];
+            }
+        }
+
+        return null;
+    }
+
 }

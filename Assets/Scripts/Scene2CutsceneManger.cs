@@ -8,7 +8,7 @@ public class Scene2CutsceneManger : MonoBehaviour
     public Canvas canvas;
     public NpcCharacteristics npc1;
     public NpcCharacteristics npc2;
-    bool cutsceneStarted = false;
+    public bool cutsceneStarted = false;
     public PlayableDirector cutsceneDirector;
     // private float timeWhen2TaskOver;
 
@@ -38,7 +38,7 @@ public class Scene2CutsceneManger : MonoBehaviour
 
     IEnumerator StartCutscene()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(10f);
         Debug.Log("Cutscene");
         canvas.enabled = true;
         if (cutsceneDirector != null)

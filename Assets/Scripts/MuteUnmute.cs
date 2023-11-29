@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class MuteUnmute : MonoBehaviour
@@ -29,12 +30,15 @@ public class MuteUnmute : MonoBehaviour
             audioSource.mute = false;
             isMuted = false;
             muteButton.image.sprite = unmuteImage.sprite;
+            EventSystem.current.SetSelectedGameObject(GameObject.FindWithTag("Player"));
         }
         else
         {
             audioSource.mute = true;
             isMuted = true;
             muteButton.image.sprite = muteImage.sprite;
+            EventSystem.current.SetSelectedGameObject(GameObject.FindWithTag("Player"));
+
         }
     }
 }

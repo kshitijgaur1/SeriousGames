@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class NpcCharacteristics : MonoBehaviour
 {
+    public GameObject npc2object;
+    public GameObject remote;
+    
+    
     private Transform player;
     [SerializeField] private float interactionDistance = 2;
     private DialogueTrigger dialogueTrigger;
@@ -21,6 +25,10 @@ public class NpcCharacteristics : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         dialogueTrigger = GetComponent<DialogueTrigger>();
         dialogueManager = FindObjectOfType<DialogueManager>();
+        if(npc2object != null)
+            npc2object.SetActive(false);
+        if(remote != null)
+            remote.SetActive(false);
     }
 
     // Update is called once per frame
@@ -38,6 +46,11 @@ public class NpcCharacteristics : MonoBehaviour
                 dialogueManager.NextMessage();
             }
         }
+        
+        if(guidelineRead && npc2object != null)
+            npc2object.SetActive(true);
+        if(guidelineRead && npc2object == null)
+            remote.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D other)

@@ -9,6 +9,7 @@ TagManager:
   - Grandpa
   - Power Button
   - Close Button
+  - Close Button Controls Hint
   layers:
   - Default
   - TransparentFX

@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class UIControllerControlsHint : UIController
 {
-    //select button with tag "Power Button"
     private GameObject closeButton;
 
     void Start()

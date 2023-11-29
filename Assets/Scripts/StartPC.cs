@@ -7,7 +7,7 @@ public class StartPC : MonoBehaviour
 {
     
     // Start is called before the first frame update
-    [SerializeField] float interactionDistance = 2;
+    [SerializeField] float interactionDistance = 4;
     void Start()
     {
         

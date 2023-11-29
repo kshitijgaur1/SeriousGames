@@ -389,6 +389,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2638642189693163697, guid: ea860799d8dcc0b99a9d03a9780a9c5c, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2638642189693163697, guid: ea860799d8dcc0b99a9d03a9780a9c5c, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.8018868
+      objectReference: {fileID: 0}
+    - target: {fileID: 2638642189693163697, guid: ea860799d8dcc0b99a9d03a9780a9c5c, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.8018868
+      objectReference: {fileID: 0}
+    - target: {fileID: 2638642189693163697, guid: ea860799d8dcc0b99a9d03a9780a9c5c, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.8018868
+      objectReference: {fileID: 0}
+    - target: {fileID: 2638642189693163697, guid: ea860799d8dcc0b99a9d03a9780a9c5c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -422,6 +438,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4725069238844189549, guid: ea860799d8dcc0b99a9d03a9780a9c5c, type: 3}
       propertyPath: m_Name
+      value: Close Button Controls Hint
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725069238844189549, guid: ea860799d8dcc0b99a9d03a9780a9c5c, type: 3}
+      propertyPath: m_TagString
       value: Close Button Controls Hint
       objectReference: {fileID: 0}
     - target: {fileID: 6364115530668860386, guid: ea860799d8dcc0b99a9d03a9780a9c5c, type: 3}

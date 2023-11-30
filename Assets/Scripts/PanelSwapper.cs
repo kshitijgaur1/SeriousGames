@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PanelSwapper : MonoBehaviour
@@ -12,7 +13,6 @@ public class PanelSwapper : MonoBehaviour
     public GameObject panelHome;
     public GameObject panelExcel;
     public string str1, str2;
-    public bool guidlineRead = false;
     [SerializeField]UIControllerGuideline uIControllerGuideline;
     void Start()
     {
@@ -37,11 +37,9 @@ public class PanelSwapper : MonoBehaviour
         
         if(levelCleared) {
             Debug.Log("Level Cleared");
-            Debug.Log(guidlineRead);
             uIControllerGuideline.ShowCanvas(str1, str2);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            Debug.Log(guidlineRead);
         }
     }
 
@@ -53,6 +51,6 @@ public class PanelSwapper : MonoBehaviour
 
     public void NextSceneLoader()
     {
-
+        SceneManager.LoadScene("End Scene", LoadSceneMode.Single);
     }
 }

@@ -1739,8 +1739,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'The reimbursement details for are wrong.It should be 3500 and not 2000.
-    We have to submit this data soon. You have to fix it! '
+  m_Text: 'The Accomodation Reimbursement details for are wrong.It should be 3500
+    and not 2000. We have to submit this data soon. You have to fix it! '
 --- !u!222 &1776747827
 CanvasRenderer:
   m_ObjectHideFlags: 0

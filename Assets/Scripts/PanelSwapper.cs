@@ -11,6 +11,8 @@ public class PanelSwapper : MonoBehaviour
     // Start is called before the first frame update
     public GameObject panelHome;
     public GameObject panelExcel;
+    public string str1, str2;
+    public bool guidlineRead = false;
     [SerializeField]UIControllerGuideline uIControllerGuideline;
     void Start()
     {
@@ -35,9 +37,11 @@ public class PanelSwapper : MonoBehaviour
         
         if(levelCleared) {
             Debug.Log("Level Cleared");
-            uIControllerGuideline.ShowCanvas("LINE 1 OF THE GUIDELINE", "LINE 2 OF THE GUIDELINE");
+            Debug.Log(guidlineRead);
+            uIControllerGuideline.ShowCanvas(str1, str2);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            Debug.Log(guidlineRead);
         }
     }
 
@@ -45,5 +49,10 @@ public class PanelSwapper : MonoBehaviour
     {
         panelExcel.SetActive(true);
         panelHome.SetActive(false);
+    }
+
+    public void NextSceneLoader()
+    {
+
     }
 }

@@ -50,7 +50,6 @@ public class ExcelKeyboardNavigation : MonoBehaviour
             //Shift-Tab Reverse 
             if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Tab))
             {
-                Debug.Log("Shift-Tab Left");
                 if (EventSystem.current.currentSelectedGameObject == null ||
                     !IsChildOfCurrentPanel(EventSystem.current.currentSelectedGameObject, currentPanel))
                 {
@@ -63,7 +62,6 @@ public class ExcelKeyboardNavigation : MonoBehaviour
                         GetPreviousSelectableInPanel(EventSystem.current.currentSelectedGameObject, currentPanel);
                     if (previous != null)
                     {
-                        Debug.Log("Previous");
                         previous.Select();
                     }
                 }
@@ -108,7 +106,6 @@ public class ExcelKeyboardNavigation : MonoBehaviour
                         GetNextSelectableInPanel(EventSystem.current.currentSelectedGameObject, currentPanel);
                     if (next != null)
                     {
-                        Debug.Log("Next");
                         next.Select();
                     }
             }

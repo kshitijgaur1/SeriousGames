@@ -29,11 +29,13 @@ namespace DefaultNamespace
         
         public void ShowCanvas(string text1, string text2)
         {
+            PanelSwapper swapper = FindObjectOfType<PanelSwapper>();
             this.text1.text = text1;
             this.text2.text = text2;
             
             base.ShowCanvas();
             EventSystem.current.SetSelectedGameObject(closeButton);
+            swapper.guidlineRead = true;
         }
 
         public void CloseBtnClicked()

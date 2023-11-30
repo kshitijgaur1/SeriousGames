@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,5 +18,13 @@ public class UIControllerControlsHint : UIController
     {
         base.ShowCanvas();
         EventSystem.current.SetSelectedGameObject(closeButton);
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            ShowCanvas();
+        }
     }
 }

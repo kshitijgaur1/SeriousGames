@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ public class PanelSwapper : MonoBehaviour
     // Start is called before the first frame update
     public GameObject panelHome;
     public GameObject panelExcel;
+    [SerializeField]UIControllerGuideline uIControllerGuideline;
     void Start()
     {
         panelHome.SetActive(true);
@@ -28,14 +30,14 @@ public class PanelSwapper : MonoBehaviour
             levelCleared = true;
         }
         
+            panelHome.SetActive(true);
+            panelExcel.SetActive(false);
         
-        if(!levelCleared){
-        panelHome.SetActive(true);
-        panelExcel.SetActive(false);
-        }
-        else
-        {
+        if(levelCleared) {
             Debug.Log("Level Cleared");
+            uIControllerGuideline.ShowCanvas("LINE 1 OF THE GUIDELINE", "LINE 2 OF THE GUIDELINE");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 

@@ -12,18 +12,21 @@ public class UIController : MonoBehaviour
     protected void Start()
     {
         canvas.enabled = false;
-        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        playerMovement = GameObject.FindGameObjectWithTag("Player")!=null?GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>():null;
+        
     }
 
     public void ShowCanvas()
     {
         canvas.enabled = true;
+        if(playerMovement != null)
         playerMovement.enabled = false;
     }
 
     public void HideCanvas()
     {
         canvas.enabled = false;
+        if(playerMovement != null)
         playerMovement.enabled = true;
     }
 

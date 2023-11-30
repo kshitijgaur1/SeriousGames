@@ -9,7 +9,8 @@ namespace DefaultNamespace
         private GameObject closeButton;
         public Text text1;
         public Text text2;
-        NpcCharacteristics characteristics;
+        NpcCharacteristics characteristics=null;
+        bool allTasksDone = false;
 
         void Start()
         {
@@ -25,11 +26,23 @@ namespace DefaultNamespace
             base.ShowCanvas();
             EventSystem.current.SetSelectedGameObject(closeButton);
         }
+        
+        public void ShowCanvas(string text1, string text2)
+        {
+            this.text1.text = text1;
+            this.text2.text = text2;
+            
+            base.ShowCanvas();
+            EventSystem.current.SetSelectedGameObject(closeButton);
+        }
 
         public void CloseBtnClicked()
         {
             HideCanvas();
-            characteristics.guidelineRead = true;
+            if(characteristics != null)
+                characteristics.guidelineRead = true;
+            else
+                allTasksDone = true;
         }
     }
 }

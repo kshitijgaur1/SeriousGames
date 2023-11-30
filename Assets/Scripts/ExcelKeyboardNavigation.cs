@@ -46,8 +46,9 @@ public class ExcelKeyboardNavigation : MonoBehaviour
         if (currentPanel != null)
         {
             //Shift-Tab Reverse 
-            if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && Input.GetKeyDown(KeyCode.Tab))
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Tab))
             {
+                Debug.Log("Shift-Tab Left");
                 if (EventSystem.current.currentSelectedGameObject == null ||
                     !IsChildOfCurrentPanel(EventSystem.current.currentSelectedGameObject, currentPanel))
                 {
@@ -65,6 +66,28 @@ public class ExcelKeyboardNavigation : MonoBehaviour
                     }
                 }
             }
+            
+            // else  if (Input.GetKey(KeyCode.RightShift) && Input.GetKeyDown(KeyCode.Tab))
+            // {
+            //     Debug.Log("Shift-Tab Right");
+            //     if (EventSystem.current.currentSelectedGameObject == null ||
+            //         !IsChildOfCurrentPanel(EventSystem.current.currentSelectedGameObject, currentPanel))
+            //     {
+            //         // If no UI element is selected or the selected element is not in the current panel, select the first button in the current panel.
+            //         SelectFirstButton(currentPanel);
+            //     }
+            //
+            //     {
+            //         Selectable previous =
+            //             GetPreviousSelectableInPanel(EventSystem.current.currentSelectedGameObject, currentPanel);
+            //         if (previous != null)
+            //         {
+            //             Debug.Log("Previous");
+            //             previous.Select();
+            //         }
+            //     }
+            // }
+
 
             
             else if (Input.GetKeyDown(KeyCode.Tab))

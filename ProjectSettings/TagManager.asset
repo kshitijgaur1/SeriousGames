@@ -10,6 +10,7 @@ TagManager:
   - Power Button
   - Close Button
   - Close Button Controls Hint
+  - Close Remote Button
   layers:
   - Default
   - TransparentFX

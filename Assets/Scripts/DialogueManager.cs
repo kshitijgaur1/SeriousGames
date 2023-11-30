@@ -39,8 +39,11 @@ public class DialogueManager : MonoBehaviour
 		
 		isActive = true;
 		// playerRigidbody.bodyType = RigidbodyType2D.Static;
-		playerMovement.animator.SetBool("IsMoving", false);
-		playerMovement.enabled = false;
+		if (playerMovement != null)
+		{
+			playerMovement.animator.SetBool("IsMoving", false);
+			playerMovement.enabled = false;
+		}
 
 		Debug.Log("Started conversation! Loaded messages: " + messages.Length);
 		DisplayMessage();
@@ -75,8 +78,12 @@ public class DialogueManager : MonoBehaviour
 			Debug.Log("Ended conversation!");
 			backgroundBox.LeanScale(Vector3.zero, 0.2f).setEaseInOutExpo();
 			// playerRigidbody.bodyType = RigidbodyType2D.Kinematic;
-			playerMovement.animator.SetBool("IsMoving", true);
-			playerMovement.enabled = true;
+			if (playerMovement != null)
+			{
+				playerMovement.animator.SetBool("IsMoving", true);
+				playerMovement.enabled = true;
+			}
+
 			isActive = false;
 			
 			if (nc!=null && nc.taskDone)
@@ -99,8 +106,8 @@ public class DialogueManager : MonoBehaviour
 	void Start()
 	{
 		backgroundBox.transform.localScale = Vector3.zero;
-		playerRigidbody = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
-		playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+		playerRigidbody = GameObject.FindGameObjectWithTag("Player")!=null?GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>():null;
+		playerMovement = GameObject.FindGameObjectWithTag("Player")!=null?GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>():null;
 		
 	}
 

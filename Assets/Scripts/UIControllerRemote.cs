@@ -9,18 +9,18 @@ namespace DefaultNamespace
     public class UIControllerRemote:UIController
     {
         //select button with tag "Power Button"
-        private GameObject powerButton;
+        private GameObject closeButton;
 
         void Start()
         {
             base.Start();
-            powerButton = GameObject.FindGameObjectWithTag("Power Button"); 
+            closeButton = GameObject.FindGameObjectWithTag("Close Remote Button"); 
         }
 
         public void ShowCanvas()
         {
             base.ShowCanvas();
-            EventSystem.current.SetSelectedGameObject(powerButton);
+            EventSystem.current.SetSelectedGameObject(closeButton);
         }
     }
 }

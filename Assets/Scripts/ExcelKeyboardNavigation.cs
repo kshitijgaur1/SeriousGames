@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class ExcelKeyboardNavigation : MonoBehaviour
 {
+    [SerializeField] Actor[] actors;
+    [SerializeField] Message[] messages;
+    [SerializeField]
+    DialogueManager dialogueManager;
+    [SerializeField] AudioSource audioSource;
+
     private bool firstClick;
 
     // Start is called before the first frame update
@@ -17,6 +23,7 @@ public class ExcelKeyboardNavigation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.mousePresent && !firstClick)
         {
             if (Input.GetMouseButtonDown(0))
@@ -24,14 +31,68 @@ public class ExcelKeyboardNavigation : MonoBehaviour
                 firstClick = true;
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
+                
+                if (dialogueManager.isActive == false)
+                {
+                    dialogueManager.OpenDialogue(messages, actors, null);
+                }
             }
+        }
+        
+        if (dialogueManager.isActive == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            dialogueManager.NextMessage();
         }
 
         GameObject currentPanel = GetActivePanel();
         if (currentPanel != null)
         {
+            //Shift-Tab Reverse 
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Tab))
+            {
+                Debug.Log("Shift-Tab Left");
+                if (EventSystem.current.currentSelectedGameObject == null ||
+                    !IsChildOfCurrentPanel(EventSystem.current.currentSelectedGameObject, currentPanel))
+                {
+                    // If no UI element is selected or the selected element is not in the current panel, select the first button in the current panel.
+                    SelectFirstButton(currentPanel);
+                }
 
-            if (Input.GetKeyDown(KeyCode.Tab))
+                {
+                    Selectable previous =
+                        GetPreviousSelectableInPanel(EventSystem.current.currentSelectedGameObject, currentPanel);
+                    if (previous != null)
+                    {
+                        Debug.Log("Previous");
+                        previous.Select();
+                    }
+                }
+            }
+            
+            // else  if (Input.GetKey(KeyCode.RightShift) && Input.GetKeyDown(KeyCode.Tab))
+            // {
+            //     Debug.Log("Shift-Tab Right");
+            //     if (EventSystem.current.currentSelectedGameObject == null ||
+            //         !IsChildOfCurrentPanel(EventSystem.current.currentSelectedGameObject, currentPanel))
+            //     {
+            //         // If no UI element is selected or the selected element is not in the current panel, select the first button in the current panel.
+            //         SelectFirstButton(currentPanel);
+            //     }
+            //
+            //     {
+            //         Selectable previous =
+            //             GetPreviousSelectableInPanel(EventSystem.current.currentSelectedGameObject, currentPanel);
+            //         if (previous != null)
+            //         {
+            //             Debug.Log("Previous");
+            //             previous.Select();
+            //         }
+            //     }
+            // }
+
+
+            
+            else if (Input.GetKeyDown(KeyCode.Tab))
             {
                 if (EventSystem.current.currentSelectedGameObject == null ||
                     !IsChildOfCurrentPanel(EventSystem.current.currentSelectedGameObject, currentPanel))
@@ -40,28 +101,18 @@ public class ExcelKeyboardNavigation : MonoBehaviour
                     SelectFirstButton(currentPanel);
                 }
 
+
                 // Tab key pressed, navigate to the next selectable UI element in the current panel.
-                if(!Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.RightShift)){
+                
                     Selectable next =
                         GetNextSelectableInPanel(EventSystem.current.currentSelectedGameObject, currentPanel);
                     if (next != null)
                     {
+                        Debug.Log("Next");
                         next.Select();
                     }
-                }
-
-                //Shift-Tab Reverse 
-                if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-                {
-                    Selectable previous =
-                        GetPreviousSelectableInPanel(EventSystem.current.currentSelectedGameObject, currentPanel);
-                    if (previous != null)
-                    {
-                        previous.Select();
-                    }
-                }
             }
-
+            
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
             {
                 // Enter key pressed, trigger the click action on the currently selected button in the current panel.
@@ -132,5 +183,4 @@ public class ExcelKeyboardNavigation : MonoBehaviour
 
         return null;
     }
-
 }

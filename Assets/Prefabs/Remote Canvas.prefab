@@ -2358,7 +2358,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2808939400470312109}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: BtnClicked
+        m_MethodName: CloseBtnClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

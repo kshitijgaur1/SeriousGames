@@ -31,6 +31,10 @@ public class ValidateDataCell : MonoBehaviour
             // Debug.Log(CellTextInt);
             CellBackground.color = new Color(0.38f, 1f, 0.7f);
         }
+        else if(CellKey == "Bill Amt")
+        {
+            CellBackground.color = new Color(1f, 0.68f, 0.68f);
+        }
         
         if (CellKey == "Total Bill Amt" && CellTextInt == 16100)
         {
@@ -38,12 +42,20 @@ public class ValidateDataCell : MonoBehaviour
             // Debug.Log(CellTextInt);
             CellBackground.color = new Color(0.38f, 1f, 0.7f);
         }
+        else if(CellKey == "Total Bill Amt")
+        {
+            CellBackground.color = new Color(1f, 0.68f, 0.68f);
+        }
         
         if (CellKey == "Total Balance" && CellTextInt == 2400)
         {
             // Debug.Log("Total Balance is 3500");
             // Debug.Log(CellTextInt);
             CellBackground.color = new Color(0.38f, 1f, 0.7f);
+        }
+        else if(CellKey == "Total Balance")
+        {
+            CellBackground.color = new Color(1f, 0.68f, 0.68f);
         }
         
     }

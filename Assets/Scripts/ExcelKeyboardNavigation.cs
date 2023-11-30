@@ -10,6 +10,7 @@ public class ExcelKeyboardNavigation : MonoBehaviour
     [SerializeField] Message[] messages;
     [SerializeField]
     DialogueManager dialogueManager;
+    [SerializeField] AudioSource audioSource;
 
     private bool firstClick;
 
@@ -22,6 +23,7 @@ public class ExcelKeyboardNavigation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.mousePresent && !firstClick)
         {
             if (Input.GetMouseButtonDown(0))

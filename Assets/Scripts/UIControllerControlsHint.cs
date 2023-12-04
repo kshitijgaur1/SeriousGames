@@ -12,6 +12,7 @@ public class UIControllerControlsHint : UIController
     {
         base.Start();
         closeButton = GameObject.FindGameObjectWithTag("Close Button Controls Hint"); 
+        ShowCanvas();
     }
 
     public void ShowCanvas()

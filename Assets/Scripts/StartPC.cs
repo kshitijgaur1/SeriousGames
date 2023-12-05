@@ -19,7 +19,7 @@ public class StartPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (scene2CutsceneManger.cutsceneStarted && interactionDistance >= Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position))
+        if (scene2CutsceneManger.cutsceneEnded && interactionDistance >= Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position))
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {

@@ -9,13 +9,16 @@ public class Scene2CutsceneManger : MonoBehaviour
     public NpcCharacteristics npc1;
     public NpcCharacteristics npc2;
     public bool cutsceneStarted = false;
+    public bool cutsceneEnded = false;
     public PlayableDirector cutsceneDirector;
+    public PlayerMovement playerMovement;
     // private float timeWhen2TaskOver;
 
     // Update is called once per frame
     private void Start()
     {
         canvas.enabled = false;
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
 
     void Update()
@@ -41,11 +44,14 @@ public class Scene2CutsceneManger : MonoBehaviour
         yield return new WaitForSeconds(10f);
         Debug.Log("Cutscene");
         canvas.enabled = true;
+        playerMovement.enabled = false;
         if (cutsceneDirector != null)
         {
             cutsceneDirector.Play();
         }
         yield return new WaitForSeconds((float)cutsceneDirector.duration);
+        playerMovement.enabled = true;
         canvas.enabled = false;
+        cutsceneEnded = true;
     }
 }

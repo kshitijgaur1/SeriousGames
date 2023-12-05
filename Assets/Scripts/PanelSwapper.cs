@@ -37,9 +37,9 @@ public class PanelSwapper : MonoBehaviour
         
         if(levelCleared) {
             Debug.Log("Level Cleared");
-            uIControllerGuideline.ShowCanvas(str1, str2);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            uIControllerGuideline.ShowCanvas(str1, str2);
         }
     }
 

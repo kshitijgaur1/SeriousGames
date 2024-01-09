@@ -1,3 +1,5 @@
+// This script is used for triggering the dialogs
+
 using DefaultNamespace;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,13 +16,17 @@ public class DialogueTrigger : MonoBehaviour {
 
     public void StartDialog()
     {
+		// nc is the current npc character to interact
 		NpcCharacteristics nc = GetComponent<NpcCharacteristics>();
+
+		// trigger the dialogs based on the status of the task and are passed to dialog manager script
 		if (!nc.taskDone)
 		{
 			FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors, nc);
 		}
 		else
 		{
+			// if task is complete and dialog is read, then it will display only the guideline canvas
 			if (!nc.guidelineRead)
 			{
 				FindObjectOfType<DialogueManager>().OpenDialogue(messages2, actors, nc);

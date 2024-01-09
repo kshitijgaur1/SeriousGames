@@ -1,3 +1,6 @@
+// This script contains the logic to handle the chest
+// When the chest is toggle to open the image canvas will be set active
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -52,6 +55,7 @@ public class ChestController : MonoBehaviour
         if(distanceToPlayer <= interactionDistance && !hasKey && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("You need a key to open this chest");
+            // dialog popup for trying to open chest without key
             if (dialogueManager.isActive == false)
             {
                 dialogueManager.OpenDialogue(messages, actors, null);
@@ -78,12 +82,12 @@ public class ChestController : MonoBehaviour
         if (open)
         {
             spriteRenderer.sprite = openChestSprite;
-            OpenImage(); // Call the OpenImage method to display the item screen.
+            OpenImage(); // Call the OpenImage method to display the image canvas.
         }
         else
         {
             spriteRenderer.sprite = closedChestSprite;
-            CloseImage(); // Call the CloseImage method to hide the item screen.
+            CloseImage(); // Call the CloseImage method to hide the image canvas.
         }
     }
 

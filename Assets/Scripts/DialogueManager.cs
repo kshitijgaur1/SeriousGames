@@ -1,3 +1,5 @@
+// This script manages the flow of dialogs
+
 using System.Collections;
 using System.Collections.Generic;
 using DefaultNamespace;
@@ -26,7 +28,7 @@ public class DialogueManager : MonoBehaviour
 	public bool isActive = false;
     [FormerlySerializedAs("controller")] public UIControllerGuideline controllerGuideline;
 
-	
+	// Displays the message
     public void OpenDialogue(Message[] messages, Actor[] actors, NpcCharacteristics npcC)
 	{
 		currentMessages = messages;

@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Dialog class for Dialogs and names of character
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

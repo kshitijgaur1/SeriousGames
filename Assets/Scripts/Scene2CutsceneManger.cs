@@ -1,3 +1,5 @@
+// These script manages the 2nd cutscene
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +16,6 @@ public class Scene2CutsceneManger : MonoBehaviour
     public PlayerMovement playerMovement;
     // private float timeWhen2TaskOver;
 
-    // Update is called once per frame
     private void Start()
     {
         canvas.enabled = false;
@@ -23,6 +24,7 @@ public class Scene2CutsceneManger : MonoBehaviour
 
     void Update()
     {
+        // if 1st two tasks are completed then only this cutscene will be invoked after delay of 10s
         if (!cutsceneStarted && npc1.guidelineRead && npc2.guidelineRead && !npc1.dialogueManager.isActive && !npc2.dialogueManager.isActive)
         {
             // timeWhen2TaskOver = TimeTillScene.GetTime();

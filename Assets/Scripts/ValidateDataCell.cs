@@ -1,3 +1,5 @@
+// This script checks for the entered data in cells of excel and displays green color if data is correctly entered
+
 using System;
 using System.Collections;
 using System.Collections.Generic;

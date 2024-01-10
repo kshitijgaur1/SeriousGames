@@ -1,3 +1,5 @@
+// This script managees the timer
+
 using System.Collections;
 using System.Collections.Generic;
 using DefaultNamespace;

@@ -1,3 +1,5 @@
+// Displaying remote canvas
+
 using System.Collections;
 using System.Collections.Generic;
 using DefaultNamespace;

@@ -1,3 +1,6 @@
+// Inherits the UIController class
+// For Displaying the remote canvas
+
 using System;
 using Unity.VisualScripting;
 using UnityEngine;

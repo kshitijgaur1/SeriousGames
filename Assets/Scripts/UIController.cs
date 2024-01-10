@@ -1,3 +1,6 @@
+// This script contains the logic for showing and hiding the canvas
+// This script is used as parent class
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,4 +1,5 @@
-﻿public class TimeTillScene
+﻿// class for managing time across the scenes
+public class TimeTillScene
     {
         private static float timeStamp = 0;
         

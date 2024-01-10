@@ -1,3 +1,6 @@
+// Inherits the UIController class
+// For Displaying the hints canvas
+
 using System;
 using System.Collections;
 using System.Collections.Generic;

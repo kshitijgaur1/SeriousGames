@@ -1,3 +1,6 @@
+// Inherits the UIController class
+// For Displaying the Guideline canvas
+
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;

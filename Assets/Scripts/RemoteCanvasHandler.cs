@@ -1,3 +1,5 @@
+// Displaying text on remote canvas
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;

@@ -19,7 +19,7 @@ public class SkipCutScene : MonoBehaviour
     void Update()
     {
         
-        
+        // For skiping the current instance of the cutscene
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) ||
             Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.RightArrow))
         {
@@ -33,6 +33,7 @@ public class SkipCutScene : MonoBehaviour
             
         }
 
+        // For going to previous instance of the cutscene
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if(director.time - (director.time % timeStep) - timeStep <= 7f)

@@ -1,3 +1,5 @@
+// For Loading the laptop scene from home scene
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

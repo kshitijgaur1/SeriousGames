@@ -1,3 +1,5 @@
+// This script is used for player movement using keyboard
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -32,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("MoveY", 0f);
             
             Vector2 targetPos =  transform.position+ transform.right * (Time.deltaTime * speedFactor);
+
+            // for checking any obstacle
             if (Physics2D.OverlapCircle(targetPos, 0.1f, solidObjectsLayer) == null && Physics2D.OverlapCircle(targetPos, 0.1f, interactableLayer) == null)
                 transform.position = targetPos;
         }
@@ -40,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("MoveX", -1f);
             animator.SetFloat("MoveY", 0f);
             Vector2 targetPos =  transform.position - transform.right * (Time.deltaTime * speedFactor);
+
+            // for checking any obstacle
             if (Physics2D.OverlapCircle(targetPos, 0.1f, solidObjectsLayer) == null && Physics2D.OverlapCircle(targetPos, 0.1f, interactableLayer) == null)
                 transform.position = targetPos;
         }
@@ -48,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("MoveX", 0f);
             animator.SetFloat("MoveY", 1f);
             Vector2 targetPos =  transform.position+ transform.up * (Time.deltaTime * speedFactor);
+
+            // for checking any obstacle
             if (Physics2D.OverlapCircle(targetPos, 0.1f, solidObjectsLayer) == null && Physics2D.OverlapCircle(targetPos, 0.1f, interactableLayer) == null)
                 transform.position = targetPos;
         }
@@ -56,6 +64,8 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("MoveX", 0f);
             animator.SetFloat("MoveY", -1f);
             Vector2 targetPos =  transform.position - transform.up * (Time.deltaTime * speedFactor);
+
+            // for checking any obstacle
             if (Physics2D.OverlapCircle(targetPos, 0.1f, solidObjectsLayer) == null && Physics2D.OverlapCircle(targetPos, 0.1f, interactableLayer) == null)
                 transform.position = targetPos;
         }

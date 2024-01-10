@@ -1,3 +1,5 @@
+// This script is used to navigate the excel in third task using keyboard
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,7 +25,7 @@ public class ExcelKeyboardNavigation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // for displaying mouse not working dialog
         if (Input.mousePresent && !firstClick)
         {
             if (Input.GetMouseButtonDown(0))

@@ -1,3 +1,5 @@
+// This script is used to manage npc characters
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -34,6 +36,7 @@ public class NpcCharacteristics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // For player's interaction with npc 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         if (distanceToPlayer <= interactionDistance && Input.GetKeyDown(KeyCode.Space))
         {
@@ -47,6 +50,7 @@ public class NpcCharacteristics : MonoBehaviour
             }
         }
         
+        // Grandpa (2nd npc) will be visible only when 1st task is complete
         if(guidelineRead && npc2object != null)
             npc2object.SetActive(true);
         if(guidelineRead && npc2object == null)

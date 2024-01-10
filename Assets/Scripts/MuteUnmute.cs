@@ -1,3 +1,5 @@
+// This script is to managing audio
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

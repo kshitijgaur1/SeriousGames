@@ -1,3 +1,5 @@
+// This script is used to open and close the family image when chest is toggled
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

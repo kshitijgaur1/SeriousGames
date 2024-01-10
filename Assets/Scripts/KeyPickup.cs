@@ -1,3 +1,5 @@
+// This script is for managing key 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

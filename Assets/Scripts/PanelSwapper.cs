@@ -1,3 +1,5 @@
+// This script is for 3rd task related to pc and used to manage the screen to display in pc
+
 using System.Collections;
 using System.Collections.Generic;
 using DefaultNamespace;
@@ -16,12 +18,14 @@ public class PanelSwapper : MonoBehaviour
     [SerializeField]UIControllerGuideline uIControllerGuideline;
     void Start()
     {
+        // At start home panel will be set active
         panelHome.SetActive(true);
         panelExcel.SetActive(false);
     }
 
     public void showHomePanel()
     {
+        // for checking if all the cells in excel is green i.e. level is completed
         for(int index = 0; index < cellsToBeCheckedColor.Length; index++)
         {
             if(cellsToBeCheckedColor[index].color != new Color(0.38f, 1f, 0.7f))
@@ -43,12 +47,14 @@ public class PanelSwapper : MonoBehaviour
         }
     }
 
+    // Displaing excel panel
     public void showExcelPanel()
     {
         panelExcel.SetActive(true);
         panelHome.SetActive(false);
     }
 
+    // Navigating to end scene when the task is completed
     public void NextSceneLoader()
     {
         SceneManager.LoadScene("End Scene", LoadSceneMode.Single);

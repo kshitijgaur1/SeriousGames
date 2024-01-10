@@ -1,3 +1,5 @@
+// This script is used for starting new game if the game is ended
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
